@@ -1,0 +1,10 @@
+As an admin/hr, I want to be able to add information about new employees to the Employee list so that other co-workers can see general information about new ones.
+
+Scenario - Add information about new employees.
+
+Given - The user navigated to the PIM page.
+When - The user presses the button "+ Add".
+And - The user navigates to the "Add Employee" form page.
+Then - The user writes information into the fields.
+When - The user presses the button "Save".
+Then - The system adds a new employee to the "Employee List".
