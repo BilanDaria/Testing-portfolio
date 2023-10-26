@@ -1,0 +1,52 @@
+ANP-1: Add a new employee to the Employee list.
+
+Description
+  Admin can add a new employee to the Employee list.
+
+Priority
+  High
+
+Preconditions
+  1. Open link: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login.
+  2. Be logged as Admin.
+  3. Open the "PIM" page by choosing in the left side menu.
+
+Input data
+  1. Positive test case data
+     First name: John 
+     Second name: Mark 
+     Last name: Williams 
+     Employee id: autogenerate (not empty)
+
+  2. Positive test case data
+     First name: John 
+     Second name: 
+     Last name: Williams 
+     Employee id: autogenerate (not empty)
+
+Steps
+1. First test case
+
+|                 Step desc                   | Input data |                  Expected result                         |
+|---------------------------------------------|------------|----------------------------------------------------------|
+| 1. Click the '+ Add' button                 |            | Open the "New Employee" form page                        |
+| 2. Input 'First name' in the text field     | John       | Successfully filled                                      |
+| 3. Input 'Middle name' in the text field    | Mark       | Successfully filled                                      |
+| 4. Input 'Last name" in the text field      | Williams   | Successfully filled                                      |
+| 5. Check the 'Employee id' auto-filed field |            | Successfully filled                                      |
+| 6. Click the 'Save' button                  |            | Successfully added a new employee to the "Employee list" |
+
+2. Second test case
+
+|                 Step desc                   | Input data |                  Expected result                         |
+|---------------------------------------------|------------|----------------------------------------------------------|
+| 1. Click the '+ Add' button                 |            | Open the "New Employee" form page                        |
+| 2. Input 'First name' in the text field     | John       | Successfully filled                                      |
+| 3. Input 'Middle name' in the text field    |            | Optional                                                 |
+| 4. Input 'Last name" in the text field      | Williams   | Successfully filled                                      |
+| 5. Check the 'Employee id' auto-filed field |            | Successfully filled                                      |
+| 6. Click the 'Save' button                  |            | Successfully added a new employee to the "Employee list" |
+
+Postconditions
+  Return to the "PIM" page.
+
