@@ -1,0 +1,69 @@
+ANP-2: Add a new employee to the Employee list with input invalid data.
+
+Description
+  When inputting invalid data into the 'Add employee' form, must show the error messages. 
+
+Priority
+  High
+
+Preconditions
+  1. Open link: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login.
+  2. Be logged as Admin.
+  3. Open the "PIM" page by choosing in the left side menu.
+
+Input data
+  1. Negative test case data
+      First name: John123 
+      Second name: Mark_1!@
+      Last name: Williams432
+      Employee id: f134@45*! 
+
+  2. Negative test case data
+      First name:  
+      Second name: Mark 
+      Last name: Williams432
+      Employee id: autogenerate (not empty)
+
+  3. Negative test case data
+      First name:  
+      Second name: 
+      Last name: 
+      Employee id:
+
+Steps
+1. First test case
+
+|                Step desc                 | Input data |                Expected result                  |
+|------------------------------------------|------------|-------------------------------------------------|
+| 1. Click the '+ Add' button              |            | Open the "New Employee" form page               |
+| 2. Input 'First name' in the text field  | John123    | Error message about wrong input data            |
+| 3. Input 'Middle name' in the text field | Mark_1!@   | Error message about wrong input data            |
+| 4. Input 'Last name" in the text field   | Williams432| Error message about wrong input data            |
+| 5. Check the 'Employee id'               | f134@45*!  | Error message about wrong input data            |
+| 6. Click the 'Save' button               |            | Error message that you can't add a new Employee |
+
+2. Second test case
+
+|                Step desc                 | Input data |                Expected result                  |
+|------------------------------------------|------------|-------------------------------------------------|
+| 1. Click the '+ Add' button              |            | Open the "New Employee" form page               |
+| 2. Input 'First name' in the text field  |            | Error message about requirement data            |
+| 3. Input 'Middle name' in the text field | Mark_1!@   | Error message about wrong input data            |
+| 4. Input 'Last name" in the text field   | Williams432| Error message about wrong input data            |
+| 5. Check the 'Employee id'               |            | Error message about requirement data            |
+| 6. Click the 'Save' button               |            | Error message that you can't add a new Employee |
+
+3. Third test case
+
+
+|                Step desc                 | Input data |                Expected result                  |
+|------------------------------------------|------------|-------------------------------------------------|
+| 1. Click the '+ Add' button              |            | Open the "New Employee" form page               |
+| 2. Input 'First name' in the text field  |            | Error message about requirement data            |
+| 3. Input 'Middle name' in the text field |            | Successfully saved                              |
+| 4. Input 'Last name" in the text field   |            | Error message about requirement data            |
+| 5. Check the 'Employee id'               |            | Error message about requirement data            |
+| 6. Click the 'Save' button               |            | Error message that you can't add a new Employee |
+
+Postconditions
+  Return to the "PIM" page.
