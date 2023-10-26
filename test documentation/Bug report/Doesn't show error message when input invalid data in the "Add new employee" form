@@ -1,0 +1,45 @@
+Date Time
+  24-10-2023 17:30
+
+Bug Report ID
+  BR-01
+
+Summary
+  The 'First name', 'Middle name' and 'Last name' on the "Add new employee" form are not validated when entering data with special characters.
+
+Severity
+  Minor
+
+Priority
+  Medium
+
+Pre-conditions
+  1. Open link: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login.
+  2. Be logged as Admin.
+  3. Open the "PIM" page by choosing in the left side menu.
+
+Steps to Reproduce
+
+|                       Step desc                      |  Input data  |                     Expected result                     |
+|------------------------------------------------------|--------------|---------------------------------------------------------|
+| 1. Click the '+ Add' button                          |              | Go to "New Employee" form page                          |
+| 2. Input 'First name' in the text field              | John123      | Display error message about wrong input data            |
+| 3. Input 'Middle name' in the text field             | Mark_1!@     | Display error message about wrong input data            |
+| 4. Input 'Last name' in the text field               | Williams432  | Display error message about wrong input data            |
+| 5. Change the auto-generated number in 'Employee id' | f134@45*!    | Display error message about wrong input data            |
+| 6. Click on the "Save" button                        |              |Display an error message about the failed saving process |
+
+Actual result
+  Successfully saving a new employee card to the Employee list.
+
+Expected result
+  Failed to save a new employee card to the Employee list.
+  Show the error messages to all these fields about invalid input data.
+
+Environment
+  Chrome version 118.0.5993.89 (Official build), (64 bit)
+
+Postconditions
+  Return to the 'PIM' page.
+
+
